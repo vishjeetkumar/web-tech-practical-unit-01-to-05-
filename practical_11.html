@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let p = parseFloat(prompt("Enter first number:"));
+    let q = parseFloat(prompt("Enter second number:"));
+
+    if (isNaN(p) || isNaN(q)) {
+        document.write("Please enter correct numbers");
+    } 
+    else {
+        let add = p + q;
+        let sub = p - q;
+        let mul = p * q;
+        let div = q !== 0 ? (p / q) : "Not divisible by zero";
+
+        document.write(
+            "Addition is: " + add + "<br>" +
+            "Subtraction is: " + sub + "<br>" +
+            "Multiplication is: " + mul + "<br>" +
+            "Division is: " + div
+        );
+    }
+</script>
+
+    
+</body>
+</html>

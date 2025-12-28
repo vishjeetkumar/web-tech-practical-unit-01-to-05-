@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Show/Hide & Toggle Class</title>
+    <style>
+        #content {
+            padding: 15px;
+            background-color: #e8e8e8;
+            margin-top: 10px;
+        }
+
+        .highlight {
+            background-color: yellow;
+            border: 2px solid orange;
+        }
+
+        button {
+            padding: 8px 15px;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Show / Hide & Toggle Class Demo</h2>
+
+<button onclick="toggleVisibility()">Show/Hide Content</button>
+<button onclick="toggleHighlight()">Toggle Highlight Class</button>
+
+<div id="content">This is some content that can be shown or hidden.</div>
+
+<script>
+
+// ---- SHOW / HIDE ELEMENT ----
+function toggleVisibility() {
+    let box = document.getElementById("content");
+
+    if (box.style.display === "none") {
+        box.style.display = "block";   // Show
+    } else {
+        box.style.display = "none";    // Hide
+    }
+}
+
+// ---- TOGGLE CSS CLASS ----
+function toggleHighlight() {
+    let box = document.getElementById("content");
+    box.classList.toggle("highlight");
+}
+
+</script>
+
+</body>
+</html>

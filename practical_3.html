@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assignment Table Layout</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 8px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <table style="width: 100%;">
+        <caption>Assignment Schedule & Progress</caption>
+        <thead>
+            <tr>
+                <th rowspan="2">Subject</th>
+                <th colspan="2">Assignment 1.1</th>
+                <th colspan="2">Assignment 1.2</th>
+            </tr>
+            <tr>
+                <th>Due Date</th>
+                <th>Status</th>
+                <th>Due Date</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Math</td>
+                <td>2025-11-15</td>
+                <td>Completed</td>
+                <td>2025-12-01</td>
+                <td>In Progress</td>
+            </tr>
+            <tr>
+                <td>Science</td>
+                <td>2025-11-20</td>
+                <td>Pending</td>
+                <td colspan="2">Not Assigned Yet</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

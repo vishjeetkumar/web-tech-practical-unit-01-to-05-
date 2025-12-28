@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Listener Demo</title>
+    <style>
+        #box {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 100px;
+            margin-top: 20px;
+            font-size: 18px;
+            border: 2px solid #333;
+        }
+        button {
+            padding: 8px 15px;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Event Listener Demo</h2>
+
+<button id="addBtn">Add Mouse Click Listener</button>
+<button id="removeBtn">Remove Mouse Click Listener</button>
+
+<div id="box">Click Me!</div>
+
+<p id="keyOutput">Press any key...</p>
+
+<script>
+
+// --------- MOUSE EVENT LISTENER ---------
+
+function boxClicked() {
+    alert("Box clicked!");
+}
+
+// Add listener
+document.getElementById("addBtn").addEventListener("click", function() {
+    document.getElementById("box").addEventListener("click", boxClicked);
+    alert("Mouse click listener added!");
+});
+
+// Remove listener
+document.getElementById("removeBtn").addEventListener("click", function() {
+    document.getElementById("box").removeEventListener("click", boxClicked);
+    alert("Mouse click listener removed!");
+});
+
+
+// --------- KEYBOARD EVENT LISTENER ---------
+
+document.addEventListener("keydown", function(event) {
+    document.getElementById("keyOutput").innerHTML =
+        "Key pressed: " + event.key;
+});
+
+</script>
+
+</body>
+</html>

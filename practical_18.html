@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Element Manipulation</title>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        #list { margin-top: 10px; }
+        button { padding: 8px 15px; margin: 5px; }
+    </style>
+</head>
+
+<body>
+
+<h2>Element Manipulation Demo</h2>
+
+<button onclick="addItem()">Add Item</button>
+<button onclick="removeItem()">Remove Last Item</button>
+<button onclick="modifyFirst()">Modify First Item</button>
+
+<ul id="list">
+    <li>Item 1</li>
+</ul>
+
+<script>
+
+// ----- APPEND CHILD (Add new li element) -----
+function addItem() {
+    let li = document.createElement("li");   // create element
+    li.innerHTML = "New Item";               // add content
+    document.getElementById("list").appendChild(li); // append to ul
+}
+
+
+// ----- REMOVE CHILD (Remove last element) -----
+function removeItem() {
+    let list = document.getElementById("list");
+
+    if (list.lastElementChild) {             // check if exists
+        list.removeChild(list.lastElementChild);
+    } else {
+        alert("No items left to remove!");
+    }
+}
+
+
+// ----- MODIFY CHILD NODE (Change content of first item) -----
+function modifyFirst() {
+    let list = document.getElementById("list");
+
+    if (list.firstElementChild) {
+        list.firstElementChild.innerHTML = "First Item (Modified)";
+    } else {
+        alert("No items to modify!");
+    }
+}
+
+</script>
+
+</body>
+</html>

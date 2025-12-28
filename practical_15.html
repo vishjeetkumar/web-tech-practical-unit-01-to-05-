@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Manipulation</title>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        #box { padding: 10px; background: #f0f0f0; margin-top: 10px; }
+    </style>
+</head>
+
+<body>
+
+    <h2 id="title">Original Heading</h2>
+
+    <p class="info">This is a paragraph.</p>
+
+    <button onclick="changeContent()">Change Content</button>
+
+    <div id="box">This is a box.</div>
+
+    <script>
+
+        function changeContent() {
+            // ---- getElementById() ----
+            document.getElementById("title").innerHTML = "Updated Heading (via getElementById)";
+
+            // ---- querySelector() ----
+            let para = document.querySelector(".info");
+            para.innerHTML = "Paragraph updated using querySelector().";
+
+            // ---- innerHTML ----
+            document.getElementById("box").innerHTML = "<b>Box content changed using innerHTML!</b>";
+        }
+
+    </script>
+
+</body>
+</html>
